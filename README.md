@@ -1,10 +1,37 @@
 # Exercices-MEAN
 Exercices sur MEAN (MongoDB, ExpressJS, AngularJS, NodeJS)
 
-Pour ajouter le proxy pour Atom.
-=> Créer le fichier ~/.atom/apmrc
-Avec le contenu :
+# Git
+
+## Syntax fichier .MD :
+* https://guides.github.com/features/mastering-markdown/
+* https://help.github.com/articles/github-flavored-markdown/
+* https://help.github.com/articles/markdown-basics/
+* https://help.github.com/articles/writing-on-github/
+
+## Commandes Git
+
+### Récupération du projet
+git clone <URL>
+
+### Ajout d'un fichier
+git add <NouveauFichier>
+
+### Commit sur le repo local
+git commit -m "Message de commit"
+
+### Commit sur Github
+git push
+
+# Atom
+
+## Pour ajouter le proxy pour Atom.
+
+Lien : https://github.com/atom/apm/blob/master/README.md#behind-a-firewall
+
+1. Créer le fichier ~/.atom/apmrc
+2. Mettre le contenu :
+```
 http-proxy = http://vipproxy1.prod.extelia.fr:8080
 https-proxy = http://vipproxy1.prod.extelia.fr:8080
-
-=> Lien : https://github.com/atom/apm/blob/master/README.md#behind-a-firewall
+```
