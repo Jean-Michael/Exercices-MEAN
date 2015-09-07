@@ -46,6 +46,6 @@ Lien : https://github.com/atom/apm/blob/master/README.md#behind-a-firewall
 1. Créer le fichier ~/.atom/apmrc
 2. Mettre le contenu :
 ```
-http-proxy = http://vipproxy1.prod.extelia.fr:8080
-https-proxy = http://vipproxy1.prod.extelia.fr:8080
+http-proxy = http://<HOST>:<PORT>
+https-proxy = http://<HOST>:<PORT>
 ```
