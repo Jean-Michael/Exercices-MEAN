@@ -12,16 +12,30 @@ Exercices sur MEAN (MongoDB, ExpressJS, AngularJS, NodeJS)
 ## Commandes Git
 
 ### Récupération du projet
+```
 git clone <URL>
+```
 
 ### Ajout d'un fichier
+```
 git add <NouveauFichier>
+```
 
 ### Commit sur le repo local
+Il faut ajouter les informations de l'utilisateur si cela n'a jamais été fait. (Cela va ajouter un fichier ~/.gitconfig)
+```
+git config --global user.email <Email>
+git config --global user.name <Login>
+```
+Puis commiter les changements
+```
 git commit -m "Message de commit"
+```
 
 ### Commit sur Github
+```
 git push
+```
 
 # Atom
 
