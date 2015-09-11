@@ -23,7 +23,38 @@ https://help.github.com/articles/set-up-git/
 git clone <URL>
 ```
 
-### Prise en compte des modifications (i.e. Indexer les changements)
+### Affiche les repo récupérés et les alias
+```
+git remote -v
+```
+
+### Afficher la branche courante
+```
+git branche
+```
+
+### Créer une branch
+Créer une branch puis la récupérer
+```
+git branch <NewBranchName>
+git checkout <NewBranchName>
+```
+OU en une seule ligne
+```
+git checkout -b <NewBranchName>
+```
+
+### Différence en local
+Pour afficher les modifs local non commitées
+```
+git diff
+```
+Pour afficher les différences non commitées mais ajoutée via 'add'
+```
+git diff --staged
+```
+
+### Prise en compte des modifications (Staged Area)
 Ajoute une liste de fichiers
 ```
 git add <List of files>
@@ -49,6 +80,13 @@ Ajoute tous les fichiers txt du projet en entier
 git add "*.txt"
 ```
 
+### Pour retirer du 'Stage Area'
+
+```
+git reset HEAD <Files>
+```
+Astuce : Après une 'add', git status affiche la commande pour faire un retour en arrière ;)
+
 ### Commit sur le repo local
 Il faut ajouter les informations de l'utilisateur si cela n'a jamais été fait. (Cela va ajouter un fichier ~/.gitconfig)
 ```
@@ -60,6 +98,21 @@ Puis commiter les changements
 git commit -m "Message de commit"
 ```
 
+Pour commiter en une ligne sans faire de 'add' (car les fichiers ont déjà été indexé une fois)
+```
+git commit -a -m 'Mon message'
+```
+### Modifier le dernier commit (Message de commmit ou ajouter des fichiers)
+```
+git add <ListeFichiersOublies>
+git commit --amend -m 'Mon nouveau message'
+```
+
+### Annuler un commit, et revenir à l'étape du 'stage area'
+```
+git reset --soft HEAD^
+```
+
 ### Créer un alias pour le répo distant (Github)
 ```
 git remote add origin <URL Repo Github>
@@ -67,7 +120,7 @@ git remote add origin <URL Repo Github>
 
 ### Commit sur Github
 ```
-git push
+git push -u <RepoAliasName> <LocalBranch>
 ```
 
 ### Récupérer les modifs de Github
