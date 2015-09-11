@@ -9,6 +9,13 @@ Exercices sur MEAN (MongoDB, ExpressJS, AngularJS, NodeJS)
 * https://help.github.com/articles/markdown-basics/
 * https://help.github.com/articles/writing-on-github/
 
+## Tutoriels
+* http://pcottle.github.io/learnGitBranching/
+* http://try.github.com/
+
+## Configuration Github
+https://help.github.com/articles/set-up-git/
+
 ## Commandes Git
 
 ### Récupération du projet
@@ -16,9 +23,30 @@ Exercices sur MEAN (MongoDB, ExpressJS, AngularJS, NodeJS)
 git clone <URL>
 ```
 
-### Ajout d'un fichier
+### Prise en compte des modifications (i.e. Indexer les changements)
+Ajoute une liste de fichiers
 ```
-git add <NouveauFichier>
+git add <List of files>
+```
+Ajoute tous les fichiers
+```
+git add --all
+```
+Ajoute tous les fichiers txt du répertoire courant
+```
+git add *.txt
+```
+Ajoute tous les fichiers txt du répertoire docs
+```
+git add docs/*.txt
+```
+Ajoute tous les fichiers du répertoire docs
+```
+git add docs/
+```
+Ajoute tous les fichiers txt du projet en entier
+```
+git add "*.txt"
 ```
 
 ### Commit sur le repo local
@@ -32,9 +60,19 @@ Puis commiter les changements
 git commit -m "Message de commit"
 ```
 
+### Créer un alias pour le répo distant (Github)
+```
+git remote add origin <URL Repo Github>
+```
+
 ### Commit sur Github
 ```
 git push
+```
+
+### Récupérer les modifs de Github
+```
+git pull
 ```
 
 # Atom
